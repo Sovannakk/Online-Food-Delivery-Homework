@@ -27,12 +27,12 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer createCustomer(CustomerRequest customerRequest) {
-        return null;
+        return customerRepository.save(customerRequest.toEntity());
     }
 
     @Override
     public Customer updateCustomer(Long id, CustomerRequest customerRequest) {
-        return null;
+        return customerRepository.save(customerRequest.toEntity(id));
     }
 
     @Override
